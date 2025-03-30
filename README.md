@@ -21,24 +21,23 @@ Lightweight and efficient AI model suitable for real-time execution
 🏗️ Project Structure
 
 ├── scripts/
-│   ├── object_detection.py   # ANN for real-time object detection
-│   ├── harmony_search.py     # HSA-based path optimization
-│   ├── drone_navigation.py   # Integration of ANN and HSA
+│   ├── object_detection.py   
+│   ├── harmony_search.py     
+│   ├── drone_navigation.py   
 │
 ├── models/
-│   ├── mobilenetv2.h5        # Pretrained MobileNetV2 model (if applicable)
+│   ├── mobilenetv2.h5        
 │
 ├── data/
-│   ├── sample_video.mp4      # Sample drone video for testing
+│   ├── sample_video.mp4      
 │
-├── README.md                 # Project documentation
+├── README.md                 
 
 🛠️ Installation & Setup
 
 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/ai-drone-navigation.git
-cd ai-drone-navigation
+https://github.com/AyushmaanSingh21/AI-Compiler-Drone-Navigation
 
 2️⃣ Install Dependencies
 
@@ -56,13 +55,6 @@ python scripts/harmony_search.py
 
 python scripts/drone_navigation.py
 
-📸 Example Output
-
-The AI system will:
-
-Detect objects in the drone's field of view.
-
-Identify obstacles and plan the optimal path.
 
 Adjust the drone's trajectory to avoid obstacles dynamically.
 
@@ -108,4 +100,4 @@ This project is licensed under the MIT License.
 
 For any queries, reach out via:
 
-Email: your-email@example.com
+Email: ayushmaansingh021@gmail,com
