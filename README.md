@@ -1,103 +1,103 @@
-# AI-Compiler-Drone-Navigation
-AI Compiler for real-time object detection in drone navigation using ANN and Harmony Search Algorithm.
-AI Compiler for Real-Time Object Detection in Drone Navigation
+# Object-Detection-From-Drone-For-Surveillance
 
-🚀 Project Overview
+<video width="320" height="240" controls>
+  <source src="path/to/video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-This project aims to develop an AI Compiler for Real-Time Object Detection in Drone Navigation using Artificial Neural Networks (ANN) and the Harmony Search Algorithm (HSA). The AI system detects objects using a deep learning model and optimizes the drone's navigation path using HSA to avoid obstacles and improve flight efficiency.
+![Example Image](/images/drone_detection_network_cameras.png)
 
-🔥 Features
+## Description 
 
-Real-Time Object Detection using a pre-trained MobileNetV2 model
+In this project, we aim to accurately detect vehicles
+in drone-captured images using various computer vision
+models. To accomplish this, we utilize the VisDrone2019
+dataset, which consists of annotated images and videos captured
+by drones in different locations, environments, and
+weather conditions. We evaluate the performance of several
+popular models, including Faster RCNN, Mask
+RCNN, Single Shot Detector (SSD), Yolo 3, Yolo 5, and Yolo
+8, and compare their results. Our findings provide insights
+into the effectiveness of different models for vehicle detection
+in drone imagery.
 
-Harmony Search Algorithm (HSA) for optimal path planning
+![Example Image](/images/Det1.png)
 
-Integration with drone camera feed for obstacle detection
+## Getting Started
+To get started with using these notebooks, you can do the following:
 
-Dynamic path correction based on detected obstacles
+1. Clone this repository to your local machine or server.
+2. Open the notebook in your preferred environment (e.g. Google Colab, Kaggle, or a good GPU computer).
+3. Follow the instructions in the notebook to train and test the models.
 
-Lightweight and efficient AI model suitable for real-time execution
+# Usage
+There are three notebooks available in this repository:
 
-🏗️ Project Structure
+ **---------------Click the image below to play---------------Raw Video---------------**
+[![Yolo v8 Demo Prediction Video Raw](/images/Capture.PNG)](https://www.youtube.com/watch?v=aqQCqUTpJwk&list=PLL2b_SupsxhU2i4IVMQ59_1RCRFsNBv0X&index=2)
 
-├── scripts/
-│   ├── object_detection.py   
-│   ├── harmony_search.py     
-│   ├── drone_navigation.py   
-│
-├── models/
-│   ├── mobilenetv2.h5        
-│
-├── data/
-│   ├── sample_video.mp4      
-│
-├── README.md                 
+YOLOv8, YOLOv5, YOLOv3: notebooks contains the implementations for object detection from drone surveillance. To use any of the notebooks, open the corresponding notebook in your preferred environment and follow the instructions to train and test the models.
 
-🛠️ Installation & Setup
+**---------------Click the image below to play---------------Detected Video---------------**
+[![Yolo v8 Demo Prediction Video Result](/images/Capture1.PNG)](https://www.youtube.com/watch?v=iJYsdUKSVtI&list=PLL2b_SupsxhU2i4IVMQ59_1RCRFsNBv0X&index=3)
 
-1️⃣ Clone the Repository
+# Dataset
+- The dataset used in this project is available at Papers with Code (https://paperswithcode.com/dataset/visdrone) website.. Please refer to the individual notebooks for more details on the specific datasets used.
+- All the notebooks in this repository can be run by just pulling the repository and running on Google Colab, Kaggle, or a good GPU computer.
+- Feel free to customize the above format to fit your specific needs. Don't forget to add the necessary information and details for each of the notebooks in your repository!
 
-https://github.com/AyushmaanSingh21/AI-Compiler-Drone-Navigation
+## Models
 
-2️⃣ Install Dependencies
+![Example Image](/images/Det2.png)
+### YOLO Models
+- [YOLOv3](https://github.com/ni9/Object-Detection-From-Drone-For-Surveillance/blob/main/Yolo-v3/yolo3.ipynb)
+- [YOLOv5](https://github.com/ni9/Object-Detection-From-Drone-For-Surveillance/blob/main/yolov5/viz_yolov5x.ipynb)
+- [YOLOv8](https://github.com/ni9/Object-Detection-From-Drone-For-Surveillance/blob/main/Yolo-V8/YoloV8.ipynb)
 
-pip install tensorflow opencv-python numpy
-
-3️⃣ Run Object Detection
-
-python scripts/object_detection.py
-
-4️⃣ Run Path Optimization
-
-python scripts/harmony_search.py
-
-5️⃣ Integrate Both for Drone Navigation
-
-python scripts/drone_navigation.py
+### Other Models
+- [SSD](https://github.com/ni9/Object-Detection-From-Drone-For-Surveillance/blob/main/SSD/SSD.ipynb)
+- [Faster RCNN](https://github.com/ni9/Object-Detection-From-Drone-For-Surveillance/blob/main/Faster-RCNN/Faster_RCNN.ipynb)
+- [Mask RCNN](https://github.com/ni9/Object-Detection-From-Drone-For-Surveillance/blob/main/MaskRCNN/Visdrone_MaskRCNN.ipynb)
+- [RCNN](https://github.com/ni9/Object-Detection-From-Drone-For-Surveillance/blob/main/rcnn/RCNN.ipynb)
 
 
-Adjust the drone's trajectory to avoid obstacles dynamically.
+## Usage
+Each notebook contains detailed instructions for running the respective model. Please refer to the README file included in each model directory for additional information.
 
-🧠 How It Works
+##Result
+| Algorithm                 | mAP@0.5 | Inference Time (ms) |
+|---------------------------|---------|---------------------|
+| SSD                       | 0.12    | 30                  |
+| Faster-RCNN (Resnet50)    | 0.23    | 150                 |
+| Faster-RCNN (Resnet50-FPN)| 0.27    | 170                 |
+| Mask-RCNN                 | 0.29    | 200                 |
+| RCNN with Resnet50        | 0.30    | 190                 |
+| Yolo-v3                   | 0.40    | 22                  |
+| Yolo-v5-Small             | 0.46    | 6.4                 |
+| Yolo-v5-Extra-Large       | 0.54    | 12.1                |
+| Yolo-v8-Small             | 0.46    | 1.20                |
+| **Yolo-v8-Extra-Large**       | **0.56**    | **3.53**                |
 
-🎯 Artificial Neural Network (ANN) for Object Detection
 
-Uses MobileNetV2 to detect objects in real-time.
+## Conclusion 
+In conclusion, we compared several object detection models using the mean average precision (mAP) metric at a threshold of 0.5 and inference time (FPS). The YOLO-v8 Extra-Large model achieved the highest mAP score of 0.56, while the YOLO-v8 Small model had the fastest inference time of 1.20 milliseconds. However, it's important to consider the trade-off between accuracy and speed when selecting a model for a specific use case.
 
-Processes input from the drone's camera feed.
 
-Identifies obstacles and marks them for avoidance.
+### Team
+- Nimesh Arora (Team Lead)
+- Dikshant Sagar
+- Ishmael
+- Shreyas Teli
+- Kavya Reddy
+- Harika
+- Ashish Gurung
+- Safal Rijal
 
-📍 Harmony Search Algorithm (HSA) for Path Planning
 
-Initializes a population of random paths.
-
-Evaluates path fitness based on distance & obstacle avoidance.
-
-Uses harmony memory consideration, pitch adjustment, and random selection to optimize the flight path.
-
-Outputs the best possible path for the drone to follow.
-
-🔮 Future Improvements
-
-Train a custom ANN model for improved accuracy.
-
-Enhance real-time performance using optimized TensorFlow models.
-
-Integrate with PX4 or AirSim for drone simulation.
-
-Add GPS-based navigation for real-world deployment.
-
-🤝 Contributing
-
-Want to improve this project? Feel free to fork the repo, create a feature branch, and submit a pull request! 🚀
-
-📜 License
-
-This project is licensed under the MIT License.
-
-📬 Contact
-
-For any queries, reach out via:
-
-Email: ayushmaansingh021@gmail,com
+### Links
+- [Demo Video (Moving Object Detection)](https://www.youtube.com/watch?v=iJYsdUKSVtI)
+- [Research Paper (Applied).pdf](https://github.com/nia194/Object-Detection/blob/main/Research%20Paper%20(Applied).pdf)
+- [Presentation (Applied).pdf](https://github.com/nia194/Object-Detection/blob/main/Presentation%20(Applied).pdf)
+- [Presentation (Theoretical).pdf](https://github.com/nia194/Object-Detection/blob/main/Presentation%20(Theoretical%20Evaluation).pdf)
+- [Papers with Code (VisDrone Dataset)](https://paperswithcode.com/dataset/visdrone)
+- [Github](https://github.com/nia194/Object-Detection)
